@@ -227,7 +227,7 @@ class Flight(pygame.sprite.Sprite):
         super().__init__()
         try:
             if is_enemy:
-                img = pygame.image.load("images/enemy.png")
+                img = pygame.image.load("images/jet_fighter_PNG7.png")
             else:
                 img = pygame.image.load("images/TempFlightFigure.png")
             self.image = pygame.transform.scale(img, (int(img.get_width() * scale), int(img.get_height() * scale)))
@@ -353,11 +353,11 @@ class LevelManager:
         self.max_level = 6
         self.level_thresholds = {
             1: 0,
-            2: 1000,
-            3: 2000,
-            4: 3000,
-            5: 4000,
-            6: 5000
+            2: 5000,
+            3: 10000,
+            4: 15000,
+            5: 20000,
+            6: 25000
         }
         self.level_completed = False
         self.level_transition_time = 0
@@ -574,7 +574,7 @@ while running:
         score = int(player_flight.distance_traveled / 10)
 
         # Check if game is completed (passed all levels)
-        if score >= 6000:
+        if score >= 26000:
             game_completed = True
 
     # Drawing

@@ -468,7 +468,7 @@ class Flight(pygame.sprite.Sprite):
         super().__init__()
         try:
             if is_enemy:
-                img = pygame.image.load("images/enemy.png")
+                img = pygame.image.load("images/jet_fighter_PNG7.png")
             else:
                 img = pygame.image.load("images/TempFlightFigure.png")
             self.image = pygame.transform.scale(img, (int(img.get_width() * scale), int(img.get_height() * scale)))
